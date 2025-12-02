@@ -3,7 +3,7 @@ src = "src"
 # out = "out"
 # dot_env = ".env"
 
-# [networks.pyevm]
+[networks.pyevm]
 # is_zksync = false
 
 [networks.anvil]
@@ -14,14 +14,20 @@ default_account_name = "anvil1"
 unsafe_password_file = "$HOME/.moccasin/unsafe_passwords/anvil1"
 # chain_id = 31337
 
-# [networks.sepolia]
-# url = "https://ethereum-sepolia-rpc.publicnode.com"
-# chain_id = 11155111
+[networks.sepolia]
+url = "https://ethereum-sepolia-rpc.publicnode.com"
+save_to_db = false
+default_account_name = "default"
+explorer_uri = "https://eth-sepolia.blockscout.com/"
+explorer_type = "blockscout"
 
-# [networks.zksync-sepolia]
-# url = "https://sepolia.era.zksync.dev"
-# chain_id = 300
-# is_zksync = true
-# prompt_live = true
+[networks.zksync-sepolia]
+url = "https://sepolia.era.zksync.dev"
+chain_id = 300
+save_to_db = false
+default_account_name = "default"
+explorer_uri = "https://explorer.sepolia.era.zksync.dev"
+explorer_type = "zksyncexplorer"
+is_zksync = true
 
 # You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
