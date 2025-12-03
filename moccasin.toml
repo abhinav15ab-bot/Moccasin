@@ -1,76 +1,27 @@
-# [project]
-# src = "src"
-# # out = "out"
-# # dot_env = ".env"
-
-# [networks.pyevm]
-# # is_zksync = false
-
-# [networks.anvil]
-# url = "http://127.0.0.1:8545"
-# save_to_db = false
-# prompt_live = false
-# default_account_name = "anvil1"
-# unsafe_password_file = "$HOME/.moccasin/unsafe_passwords/anvil1"
-# # chain_id = 31337
-
-# [networks.sepolia]
-# url = "https://ethereum-sepolia-rpc.publicnode.com"
-# save_to_db = false
-# default_account_name = "default"
-# explorer_uri = "https://eth-sepolia.blockscout.com/"
-# explorer_type = "blockscout"
-
-# [networks.sepolia-zksync]
-# url = "https://sepolia.era.zksync.dev"
-# chain_id = 300
-# save_to_db = false
-# default_account_name = "default"
-# explorer_uri = "https://explorer.sepolia.era.zksync.dev"
-# explorer_type = "zksyncexplorer"
-# is_zksync = true
-
-# # You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
-
 [project]
 src = "src"
-out = "out"
+# out = "out"
 dot_env = ".env"
 
-# ------------------------------------------
-# PY-EVM (titanoboa) local simulation network
-# ------------------------------------------
-[networks.pyevm]
-is_zksync = false
-save_to_db = false
-default_account_name = "pyevm_default"
+# [networks.pyevm]
+# is_zksync = false
 
-# ------------------------------------------
-# Anvil (Foundry Local Network)
-# ------------------------------------------
 [networks.anvil]
 url = "http://127.0.0.1:8545"
-chain_id = 31337
 save_to_db = false
 prompt_live = false
 default_account_name = "anvil1"
-unsafe_password_file = "/home/mutant/.moccasin/unsafe_passwords/anvil1"
+unsafe_password_file = "$HOME/.moccasin/unsafe_passwords/anvil1"
+# chain_id = 31337
 
-# ------------------------------------------
-# Ethereum Sepolia (Testnet)
-# ------------------------------------------
 [networks.sepolia]
 url = "https://ethereum-sepolia-rpc.publicnode.com"
-chain_id = 11155111
 save_to_db = false
 default_account_name = "default"
-explorer_uri = "https://eth-sepolia.blockscout.com/api"
+explorer_uri = "https://eth-sepolia.blockscout.com/"
 explorer_type = "blockscout"
 
-# ------------------------------------------
-# zkSync Sepolia Testnet
-# ------------------------------------------
-[networks.zksync-sepolia]
+[networks.sepolia-zksync]
 url = "https://sepolia.era.zksync.dev"
 chain_id = 300
 save_to_db = false
@@ -78,3 +29,52 @@ default_account_name = "default"
 explorer_uri = "https://explorer.sepolia.era.zksync.dev"
 explorer_type = "zksyncexplorer"
 is_zksync = true
+
+# You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
+
+# [project]
+# src = "src"
+# # out = "out"
+# dot_env = ".env"
+
+# # ------------------------------------------
+# # PY-EVM (titanoboa) local simulation network
+# # ------------------------------------------
+# [networks.pyevm]
+# is_zksync = false
+# save_to_db = false
+# default_account_name = "pyevm_default"
+
+# # ------------------------------------------
+# # Anvil (Foundry Local Network)
+# # ------------------------------------------
+# [networks.anvil]
+# url = "http://127.0.0.1:8545"
+# chain_id = 31337
+# save_to_db = false
+# prompt_live = false
+# default_account_name = "anvil1"
+# unsafe_password_file = "/home/mutant/.moccasin/unsafe_passwords/anvil1"
+
+# # ------------------------------------------
+# # Ethereum Sepolia (Testnet)
+# # ------------------------------------------
+# [networks.sepolia]
+# url = "https://ethereum-sepolia-rpc.publicnode.com"
+# chain_id = 11155111
+# save_to_db = false
+# default_account_name = "default"
+# explorer_uri = "https://eth-sepolia.blockscout.com/api"
+# explorer_type = "blockscout"
+
+# # ------------------------------------------
+# # zkSync Sepolia Testnet
+# # ------------------------------------------
+# [networks.zksync-sepolia]
+# url = "https://sepolia.era.zksync.dev"
+# chain_id = 300
+# save_to_db = false
+# default_account_name = "default"
+# explorer_uri = "https://explorer.sepolia.era.zksync.dev"
+# explorer_type = "zksyncexplorer"
+# is_zksync = true
